@@ -1,0 +1,239 @@
+{
+  "catalog_version": "1.0.0",
+  "generated_at": "2026-02-11T17:39:00-03:00",
+  "total_assets": 24,
+  "categories": {
+    "mascot": {
+      "description": "Character designs and mascot variations",
+      "training_purpose": "Procedural mascot evolution based on user interaction patterns",
+      "assets": [
+        {
+          "id": "mascot_001",
+          "filename": "ez-os_mascot_final.png",
+          "category": "mascot",
+          "subcategory": "canonical_design",
+          "tags": ["character", "final_design", "canonical"],
+          "visual_attributes": {
+            "style": "pixel_art",
+            "color_palette": "retro_gaming",
+            "mood": "friendly_neutral"
+          },
+          "procedural_metadata": {
+            "evolution_stage": "base",
+            "interaction_threshold": 0,
+            "deterministic_seed": "default"
+          }
+        },
+        {
+          "id": "mascot_002",
+          "filename": "ez-os_mascot_variations.png",
+          "category": "mascot",
+          "subcategory": "evolution_states",
+          "tags": ["variations", "evolution", "procedural"],
+          "visual_attributes": {
+            "style": "pixel_art",
+            "color_palette": "multi_theme",
+            "mood": "adaptive"
+          },
+          "procedural_metadata": {
+            "evolution_stage": "multi",
+            "interaction_threshold": "variable",
+            "deterministic_seed": "user_history_based"
+          }
+        },
+        {
+          "id": "mascot_003",
+          "filename": "ez-os_mascot_themes.png",
+          "category": "mascot",
+          "subcategory": "thematic_variations",
+          "tags": ["themes", "seasonal", "contextual"],
+          "visual_attributes": {
+            "style": "pixel_art",
+            "color_palette": "thematic",
+            "mood": "contextual"
+          },
+          "procedural_metadata": {
+            "evolution_stage": "themed",
+            "interaction_threshold": "context_based",
+            "deterministic_seed": "time_and_usage_based"
+          }
+        }
+      ]
+    },
+    "branding": {
+      "description": "Logos and brand identity assets",
+      "training_purpose": "Visual consistency and brand recognition",
+      "assets": [
+        {
+          "id": "brand_001",
+          "filename": "ez-os_hacker_and_logo.png",
+          "category": "branding",
+          "subcategory": "logo_with_character",
+          "tags": ["logo", "character", "branding"],
+          "visual_attributes": {
+            "style": "illustrated",
+            "color_palette": "brand_colors",
+            "mood": "professional_playful"
+          }
+        },
+        {
+          "id": "brand_002",
+          "filename": "logo_#2.png",
+          "category": "branding",
+          "subcategory": "logo_variant",
+          "tags": ["logo", "alternative", "minimal"],
+          "visual_attributes": {
+            "style": "minimal",
+            "color_palette": "monochrome",
+            "mood": "clean"
+          }
+        },
+        {
+          "id": "brand_003",
+          "filename": "ezos_branding_variations.png",
+          "category": "branding",
+          "subcategory": "brand_system",
+          "tags": ["branding", "system", "variations"],
+          "visual_attributes": {
+            "style": "comprehensive",
+            "color_palette": "full_spectrum",
+            "mood": "systematic"
+          }
+        }
+      ]
+    },
+    "technical": {
+      "description": "Technical diagrams and architectural blueprints",
+      "training_purpose": "System understanding and documentation",
+      "assets": [
+        {
+          "id": "tech_001",
+          "filename": "ezos_functional_blueprint.png",
+          "category": "technical",
+          "subcategory": "architecture",
+          "tags": ["blueprint", "architecture", "functional"],
+          "visual_attributes": {
+            "style": "diagram",
+            "color_palette": "technical",
+            "mood": "informative"
+          }
+        },
+        {
+          "id": "tech_002",
+          "filename": "ezos_ludic_internal_anatomy.png",
+          "category": "technical",
+          "subcategory": "internal_structure",
+          "tags": ["anatomy", "internal", "ludic"],
+          "visual_attributes": {
+            "style": "detailed_diagram",
+            "color_palette": "educational",
+            "mood": "exploratory"
+          }
+        },
+        {
+          "id": "tech_003",
+          "filename": "ez-os_final_masterpiece.png",
+          "category": "technical",
+          "subcategory": "comprehensive_overview",
+          "tags": ["masterpiece", "comprehensive", "showcase"],
+          "visual_attributes": {
+            "style": "presentation",
+            "color_palette": "full_color",
+            "mood": "impressive"
+          }
+        }
+      ]
+    },
+    "concept_art": {
+      "description": "AI-generated concept art and explorations",
+      "training_purpose": "Visual style exploration and inspiration",
+      "assets": [
+        {
+          "id": "concept_001",
+          "filename": "ChatGPT Image 7 de fev. de 2026, 22_07_06.png",
+          "category": "concept_art",
+          "subcategory": "ai_exploration",
+          "tags": ["chatgpt", "concept", "exploration"],
+          "generation_date": "2026-02-07",
+          "visual_attributes": {
+            "style": "ai_generated",
+            "color_palette": "experimental",
+            "mood": "exploratory"
+          }
+        },
+        {
+          "id": "concept_002",
+          "filename": "ChatGPT Image 7 de fev. de 2026, 22_09_15.png",
+          "category": "concept_art",
+          "subcategory": "ai_exploration",
+          "tags": ["chatgpt", "concept", "iteration"],
+          "generation_date": "2026-02-07",
+          "visual_attributes": {
+            "style": "ai_generated",
+            "color_palette": "experimental",
+            "mood": "iterative"
+          }
+        },
+        {
+          "id": "concept_003",
+          "filename": "ChatGPT Image 11 de fev. de 2026, 01_20_36.png",
+          "category": "concept_art",
+          "subcategory": "ai_exploration",
+          "tags": ["chatgpt", "concept", "recent"],
+          "generation_date": "2026-02-11",
+          "visual_attributes": {
+            "style": "ai_generated",
+            "color_palette": "experimental",
+            "mood": "refined"
+          }
+        }
+      ]
+    }
+  },
+  "procedural_training_config": {
+    "mascot_evolution": {
+      "base_seed": "user_unique_id",
+      "evolution_triggers": [
+        {
+          "trigger": "first_launch",
+          "asset_reference": "mascot_001",
+          "state": "neutral"
+        },
+        {
+          "trigger": "10_games_played",
+          "asset_reference": "mascot_002",
+          "state": "engaged"
+        },
+        {
+          "trigger": "100_hours_total",
+          "asset_reference": "mascot_003",
+          "state": "veteran"
+        }
+      ],
+      "visual_interpolation": {
+        "method": "deterministic_blend",
+        "seed_components": ["user_id", "total_playtime", "favorite_genre"],
+        "color_shift_range": [0, 30],
+        "accessory_probability": 0.15
+      }
+    },
+    "theme_adaptation": {
+      "seasonal": {
+        "spring": {"color_shift": "green", "accessory": "flower"},
+        "summer": {"color_shift": "yellow", "accessory": "sunglasses"},
+        "autumn": {"color_shift": "orange", "accessory": "leaf"},
+        "winter": {"color_shift": "blue", "accessory": "scarf"}
+      },
+      "contextual": {
+        "birthday": {"special_animation": true, "accessory": "party_hat"},
+        "achievement": {"glow_effect": true, "accessory": "medal"}
+      }
+    }
+  },
+  "usage_guidelines": {
+    "mascot_rendering": "Use mascot_001 as base, apply procedural modifications based on user history",
+    "branding_consistency": "Always use brand_001 or brand_002 for official materials",
+    "technical_documentation": "Reference tech_001 and tech_002 for system explanations",
+    "concept_exploration": "Use concept_art assets for inspiration, not production"
+  }
+}
