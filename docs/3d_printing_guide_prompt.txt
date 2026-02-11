@@ -1,0 +1,8 @@
+**Prompt para Geração de Imagem (Midjourney / DALL-E 3)**
+
+> "A high-fidelity 3D render of a retro-futuristic desktop robot companion, designed in a charming low-poly voxel hybrid style. The character is a small, cube-shaped robot (approx 30mm) with rounded chamfered edges, made of matte Light Grey (RAL 7035) plastic. It has a glossy Dark Moss Green (RAL 6005) rectangular screen faceplate recessed into the front, displaying a glowing Luminous Yellow (RAL 1026) pixel-art face with a friendly neutral expression. 
+
+> On the top right of its head, there is a small rigid antenna with a Traffic Red (RAL 3020) spherical tip. It stands on two short, cylindrical stubby legs. The lighting is soft studio lighting with rim light to highlight the matte texture of the plastic and the glossiness of the screen. The background is a clean, minimal engineering workspace with a blurred blueprint depth of field. 8k resolution, highly detailed materials, macro photography style, isometric view."
+
+**Parâmetros Sugeridos (Midjourney):**
+`--ar 1:1 --v 6.0 --style raw --stylize 250`
