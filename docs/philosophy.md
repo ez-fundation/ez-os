@@ -3,6 +3,8 @@
 ## 1. Definição do Sistema
 O EZ-OS (Easy Operating System) é um Sistema Operacional de Memória Lúdica. Sua função primordial é o registro factual de eventos de uso e a expressão simbólica desse histórico, operando de forma leve, offline e agnóstica de hardware.
 
+> **Visão Canônica**: O EZ-OS é a *fração mínima* do que seria uma IA embarcada em dispositivos.
+
 ## 2. Princípios Não Negociáveis
 - **Factualidade da Memória**: Registra apenas eventos reais.
 - **Estado Padrão de Silêncio**: Comunicação apenas quando relevante.
@@ -19,6 +21,14 @@ O núcleo é composto por domínios isolados:
 
 ## 4. Declaração de Imutabilidade
 O EZ-OS Core v1.0-FINAL é uma entidade completa. Nenhuma funcionalidade futura alterará este núcleo. Evoluções serão tratadas como camadas (Layers) ou módulos externos.
+
+---
+
+## 5. Genealogia Literária (Inspiração)
+
+> *"A storyteller. [...] It had a memory tape needed for the story."* — Isaac Asimov, **"Someday"** (1956).
+
+O EZ-OS herda o espírito do **"Bard"** de Asimov: um dispositivo dedicado, não conectado, cuja única função é preservar e recombinar a narrativa. Enquanto o Bard contava contos de fadas, o EZ-OS conta **a sua história**.
 
 ---
 *O EZ-OS não tenta prender o jogador. Ele apenas lembra quando ele volta.*
