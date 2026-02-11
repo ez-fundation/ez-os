@@ -1,9 +1,15 @@
 # EZ-OS: Sistema Operacional de Memória Lúdica Offline
 
+<div align="center">
+
+![EZ-OS Mascot](assets/ez-os_mascot_final.png)
+
 **Um sistema de memória factual para jogos retro que registra eventos reais e expressa o histórico através de um mascote procedural determinístico.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+
+</div>
 
 ---
 
@@ -32,7 +38,7 @@ O **EZ-OS** (Easy Operating System) é um Sistema Operacional de Memória Lúdic
 
 ```bash
 # Clone o repositório
-git clone https://github.com/your-username/ez-os.git
+git clone https://github.com/ez-fundation/ez-os.git
 cd ez-os
 
 # Instale em modo desenvolvimento
@@ -96,6 +102,18 @@ O EZ-OS é composto por domínios isolados:
 
 ---
 
+## 🎨 Mascote & Variações
+
+<div align="center">
+
+![Mascote Variations](assets/ez-os_mascot_variations.png)
+
+*O mascote evolui deterministicamente baseado no histórico de uso*
+
+</div>
+
+---
+
 ## 📚 Documentação
 
 - [Arquitetura Técnica](docs/architecture.md)
@@ -119,9 +137,14 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 👤 Autor
 
-**João**
-- GitHub: [@your-username](https://github.com/your-username)
+**João** - [ez-fundation](https://github.com/ez-fundation)
 
 ---
 
+<div align="center">
+
 *O EZ-OS não tenta prender o jogador. Ele apenas lembra quando ele volta.*
+
+![EZ-OS Logo](assets/ez-os_hacker_and_logo.png)
+
+</div>
