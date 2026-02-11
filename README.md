@@ -6,8 +6,9 @@
 
 **Um sistema de memória factual para jogos retro que registra eventos reais e expressa o histórico através de um mascote procedural determinístico.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![EZ-Fundation](https://img.shields.io/badge/Part%20of-EZ--Fundation-purple)](https://github.com/ez-fundation)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
 
@@ -24,6 +25,16 @@ O **EZ-OS** (Easy Operating System) é um Sistema Operacional de Memória Lúdic
 - **Identidade Procedural Determinística**: Evolução baseada em dados reais e sementes únicas
 - **Resiliência à Degradação**: Funcionalidade em ASCII/2-bit
 - **Isolamento de IA**: Processamento pesado é externo e opcional
+
+---
+
+## 🏛️ Contexto EZ-Fundation
+
+O EZ-OS é o **Kernel de Memória Lúdica** da [EZ-Fundation](https://github.com/ez-fundation).
+
+- **Identity**: Consome identidades do `EZ-Character`.
+- **Memory**: Gera e preserva o grafo de memória do usuário.
+- **Sovereignty**: Garante que os dados de "Proof of Play" pertençam ao usuário.
 
 ---
 
@@ -118,8 +129,9 @@ O EZ-OS é composto por domínios isolados:
 
 - [Arquitetura Técnica](docs/architecture.md)
 - [Filosofia e Princípios](docs/philosophy.md)
-- [Princípios de Agência](docs/agency_principles.md)
-- [Anterioridade e Filosofia](docs/prior_art.md)
+- [Contexto EZ-Fundation](docs/ez-fundation_context.md)
+- [Guia de Catalogação de Assets](docs/asset_catalog_guide.md)
+- [Design de Personagem 3D](docs/character_design.md)
 
 ---
 
