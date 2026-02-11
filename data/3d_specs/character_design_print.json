@@ -1,0 +1,100 @@
+{
+  "character_profile": {
+    "name": "EZ-OS Companion",
+    "version": "1.0.0",
+    "design_archetype": "Retro-Futuristic Tamagotchi/Robot",
+    "style": "Voxel / Low-Poly Hybrid",
+    "scale_reference": "1 unit = 1mm"
+  },
+  "geometry_specs": {
+    "body": {
+      "shape": "Rounded Cube (Chamfered Box)",
+      "dimensions_mm": {
+        "width": 30,
+        "height": 30,
+        "depth": 30
+      },
+      "corner_radius": 2.5,
+      "surface_finish": "Matte"
+    },
+    "screen_face": {
+      "shape": "Flat Rectangular Inset",
+      "dimensions_mm": {
+        "width": 24,
+        "height": 18,
+        "recess_depth": 0.5
+      },
+      "position": "Front Center",
+      "material_note": "Glossy finish or separate transparent insert"
+    },
+    "antenna": {
+      "shape": "Cylindrical Base with Spherical Tip",
+      "position": "Top Right (Viewer's Left)",
+      "dimensions_mm": {
+        "base_height": 5,
+        "base_diameter": 2,
+        "tip_diameter": 4
+      },
+      "flexibility": "Rigid"
+    },
+    "limbs": {
+      "legs": {
+        "count": 2,
+        "shape": "Short Cylindrical Stubs",
+        "dimensions_mm": {
+          "height": 4,
+          "diameter": 5
+        },
+        "stance": "Neutral Standing"
+      },
+      "arms": {
+        "count": 0,
+        "note": "Floating hands concept optional, base model armless"
+      }
+    }
+  },
+  "printing_guidelines": {
+    "recommended_material": "PLA or PETG",
+    "layer_height": "0.12mm (High Detail)",
+    "infill": "15% Gyroid",
+    "supports": {
+      "required": true,
+      "type": "Tree Supports",
+      "critical_areas": ["Antenna overhang", "Screen recess top edge"]
+    },
+    "orientation": "Printing on back face recommended if screen detail is critical"
+  },
+  "color_palette_ral": {
+    "primary_body": "RAL 7035 (Light Grey)",
+    "screen_background": "RAL 6005 (Moss Green) or RAL 9005 (Jet Black)",
+    "screen_pixels": "RAL 1026 (Luminous Yellow) or RAL 6038 (Luminous Green)",
+    "antenna_tip": "RAL 3020 (Traffic Red)"
+  },
+  "assembly_parts": [
+    {
+      "part_id": "PART_01_BODY",
+      "name": "Main Body Chassis",
+      "print_count": 1
+    },
+    {
+      "part_id": "PART_02_SCREEN_INSERT",
+      "name": "Screen Faceplate (Optional)",
+      "print_count": 1,
+      "note": "Print in different color or translucent material"
+    }
+  ],
+  "procedural_modularity": {
+    "accessory_mount_points": [
+      {
+        "id": "MOUNT_TOP_CENTER",
+        "type": "Magnetic Recess (3mm x 1mm)",
+        "purpose": "Hats/Seasonal Toppers"
+      },
+      {
+        "id": "MOUNT_BACK_CENTER",
+        "type": "Keyring Loop",
+        "purpose": "Keychain attachment"
+      }
+    ]
+  }
+}
