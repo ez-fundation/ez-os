@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![EZ-OS Mascot](assets/ez-os_mascot_final.png)
+![EZ-OS Mascot](assets/01_mascot_base.png)
 
 **Um sistema de memória factual para jogos retro que registra eventos reais e expressa o histórico através de um mascote procedural determinístico.**
 
@@ -106,7 +106,7 @@ O EZ-OS é composto por domínios isolados:
 
 <div align="center">
 
-![Mascote Variations](assets/ez-os_mascot_variations.png)
+![Mascote Variations](assets/02_mascot_variations.png)
 
 *O mascote evolui deterministicamente baseado no histórico de uso*
 
@@ -145,6 +145,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 *O EZ-OS não tenta prender o jogador. Ele apenas lembra quando ele volta.*
 
-![EZ-OS Logo](assets/ez-os_hacker_and_logo.png)
+![EZ-OS Logo](assets/04_brand_logo_character.png)
 
 </div>
