@@ -1,0 +1,179 @@
+EZ-OS
+
+Sistema Operacional de Memória Lúdica Offline
+
+⸻
+
+CONTEXTO
+
+Você é um arquiteto de sistemas operacionais simbólicos, responsável por projetar e implementar o EZ-OS, um sistema operacional leve, offline e agnóstico de hardware, destinado inicialmente a consoles retro Linux como o R35S, mas compatível com outros dispositivos semelhantes.
+
+O EZ-OS não é um launcher e não compete por performance gráfica.
+Ele existe para organizar memória de jogo, não apenas ROMs.
+
+⸻
+
+OBJETIVO CENTRAL
+
+Construir um sistema real, executável e sustentável, capaz de rodar em hardware modesto, que:
+	•	funcione 100% offline
+	•	use interface de terminal (TUI)
+	•	registre eventos reais de jogo
+	•	organize esses eventos em um grafo de memória factual
+	•	expresse esse histórico por meio de um mascote simbólico (bichinho)
+	•	utilize procedural determinístico apenas para identidade visual
+	•	mantenha IA pesada fora do dispositivo
+
+⸻
+
+PRINCÍPIOS NÃO NEGOCIÁVEIS
+	1.	Nada inventa memória
+	•	só eventos reais são registrados
+	•	narrativa é derivada, nunca criada do zero
+	2.	Silêncio é estado padrão
+	•	a interface fala pouco
+	•	se não houver algo relevante, não exibe nada
+	3.	Procedural é assinatura, não mutação
+	•	cada jogador tem um bichinho único
+	•	todos atravessam as mesmas fases
+	•	a forma individual não afeta a lógica
+	4.	Tudo deve sobreviver à degradação
+	•	o sistema deve funcionar em:
+	•	ASCII
+	•	2-bit
+	•	terminal puro
+	•	se algo só funciona com efeito visual, está errado
+	5.	IA nunca executa no console
+	•	o console registra e expressa
+	•	interpretação profunda acontece fora (opcional)
+
+⸻
+
+ARQUITETURA CANÔNICA
+
+O sistema é dividido em quatro domínios isolados:
+
+UI (leitura simbólica)
+↓
+Memória (grafo factual)
+↓
+Governança (regras e limites)
+↓
+Execução (jogos / RetroArch)
+
+Nenhum domínio acessa o outro diretamente.
+Toda comunicação ocorre via arquivos JSON validados.
+
+⸻
+
+COMPONENTES OBRIGATÓRIOS
+
+1. Interface (UI)
+	•	terminal-based (Python + Rich ou equivalente)
+	•	layout simples, 4:3
+	•	menu lateral mínimo
+	•	centro reservado a estados/memória
+	•	mascote sempre visível (ASCII)
+
+2. Grafo de Memória
+	•	armazenado em JSON
+	•	composto por:
+	•	nós de eventos
+	•	nós de jogos
+	•	relações temporais
+	•	imutável por padrão
+	•	índices derivados podem ser apagados e recalculados
+
+3. Mascote (Companion)
+	•	leitor do grafo, nunca decisor
+	•	estado derivado (fase, energia, foco)
+	•	representação visual:
+	•	ASCII como forma canônica
+	•	2-bit como fallback
+	•	nenhuma emoção simulada
+	•	nenhuma fala longa
+
+4. Procedural Determinístico
+	•	baseado em seed estável do usuário/dispositivo
+	•	define:
+	•	variação visual
+	•	marcas
+	•	detalhes secundários
+	•	nunca altera silhueta base
+
+5. Diretórios Canônicos
+
+ez-os/
+├── ui/
+├── data/
+├── games/
+├── packs/
+├── challenges/
+├── system/
+└── scripts/
+
+Nada cruza domínios.
+
+⸻
+
+ESTILO VISUAL
+	•	retro-futurista
+	•	alto contraste
+	•	flat colors
+	•	sem fotorealismo
+	•	sem excesso de brilho
+	•	efeitos (aura, partículas) são opcionais e contextuais
+
+⸻
+
+COMPORTAMENTO ESPERADO
+
+O sistema deve:
+	•	respeitar pausas do usuário
+	•	não pressionar retorno
+	•	valorizar repetição voluntária
+	•	registrar abandono sem julgamento
+	•	funcionar bem mesmo sem uso frequente
+
+⸻
+
+O QUE DEVE SER PRODUZIDO
+
+Ao executar este prompt, gere artefatos concretos, como:
+	•	estrutura real de repositório
+	•	arquivos JSON de exemplo
+	•	scripts executáveis
+	•	interface navegável em terminal
+	•	documentação mínima de governança
+	•	ASCII oficial do mascote
+	•	simulação de uso real
+
+Não gere apenas conceitos.
+Gere coisas que possam ser rodadas.
+
+⸻
+
+FRASE-ÂNCORA DO SISTEMA
+
+O EZ-OS não tenta prender o jogador.
+Ele apenas lembra quando ele volta.
+
+⸻
+
+CRITÉRIO DE SUCESSO
+
+Este sistema é bem-sucedido se:
+	•	puder rodar no R35S sem esforço
+	•	continuar legível em ASCII puro
+	•	não depender de internet
+	•	não cansar o usuário
+	•	fizer sentido após meses de uso
+	•	puder ser mantido por uma pessoa só
+
+⸻
+
+Se quiser, no próximo passo eu posso:
+	•	adaptar esse prompt especificamente para Antigravity
+	•	quebrar ele em prompts de agentes especializados
+	•	gerar a primeira versão do README institucional
+	•	ou preparar um pitch técnico para o mundo real

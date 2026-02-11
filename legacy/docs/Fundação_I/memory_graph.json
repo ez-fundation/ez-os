@@ -1,0 +1,58 @@
+            "label": "game",
+            "properties": {
+                "title": "Super_Mario_World",
+                "hash": "aba08606ea9591fd9981195d1b9cef5fd606955b",
+                "platform": "Detected via Extension",
+                "source": "User Provided",
+                "indexed_at": "now"
+            },
+            "timestamp": "2026-02-07 17:11:25.557389"
+        },
+        {
+            "id": "44d7edeb-00ac-47bd-92e1-f769fc1c7527",
+            "label": "event",
+            "properties": {
+                "type": "START",
+                "game_id": "df96fea8-4d63-498e-ba9e-ce4657a75a8d",
+                "description": "Come\u00e7ou a jogar Super Mario World"
+            },
+            "timestamp": "2026-02-07 17:11:25.557838"
+        },
+        {
+            "id": "f2af9386-3252-421a-8cf9-023f9adc00a7",
+            "label": "event",
+            "properties": {
+                "type": "STOP",
+                "game_id": "df96fea8-4d63-498e-ba9e-ce4657a75a8d",
+                "description": "Parou de jogar Super Mario World"
+            },
+            "timestamp": "2026-02-07 17:11:28.558870"
+        }
+    ],
+    "edges": [
+        {
+            "source": "13f1bf55-5fe7-4aee-a42e-158fddecfd70",
+            "target": "07644093-a6d5-44cb-a948-3b6181e90754",
+            "relation": "SESSION_END",
+            "timestamp": "2026-02-07 16:50:24.559915"
+        },
+        {
+            "source": "bdd48e74-bff2-4c6e-9699-ba6233ceb93f",
+            "target": "b7976a58-552f-429f-984b-23936d23f208",
+            "relation": "SESSION_END",
+            "timestamp": "2026-02-07 16:50:27.591334"
+        },
+        {
+            "source": "843ec626-ccdd-4978-b2b6-d706a8396fd5",
+            "target": "8324a758-fcbf-4456-9a15-874cfb156c02",
+            "relation": "SESSION_END",
+            "timestamp": "2026-02-07 17:11:15.855867"
+        },
+        {
+            "source": "44d7edeb-00ac-47bd-92e1-f769fc1c7527",
+            "target": "f2af9386-3252-421a-8cf9-023f9adc00a7",
+            "relation": "SESSION_END",
+            "timestamp": "2026-02-07 17:11:28.558894"
+        }
+    ]
+}

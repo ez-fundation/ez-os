@@ -1,0 +1,369 @@
+O objetivo desse p rompt é gerar um documento institucional + técnico no Manus, que depois pode ser levado sem ruído para o Antigravity.
+
+⸻
+
+🧠 PROMPT PARA MANUS
+
+EZ-OS — Sistema Operacional de Memória Lúdica Offline
+
+(Documento Canônico de Consolidação v1.0)
+
+⸻
+
+Você é um editor técnico-institucional responsável por consolidar e documentar um sistema operacional experimental chamado EZ-OS.
+
+O EZ-OS já foi projetado e implementado.
+Seu papel não é criar ideias novas, mas organizar, explicar e validar o que já existe, garantindo clareza, coerência e viabilidade no mundo real.
+
+Use linguagem clara, técnica, objetiva e auditável.
+
+⸻
+
+CONTEXTO DO SISTEMA
+
+O EZ-OS (Easy Operating System) é um sistema operacional leve, offline e agnóstico de hardware, projetado inicialmente para consoles retro Linux como o R35S, mas compatível com outros dispositivos semelhantes.
+
+Ele não é um launcher tradicional e não compete por performance gráfica.
+
+Seu propósito é organizar a memória de jogo, não apenas ROMs, registrando eventos reais de uso e expressando esse histórico por meio de um mascote simbólico e uma interface de terminal silenciosa  .
+
+⸻
+
+VISÃO GERAL
+
+O EZ-OS funciona como um Sistema Operacional de Memória Lúdica, baseado nos seguintes princípios:
+	•	Registrar apenas eventos reais de jogo
+	•	Manter um grafo factual de memória
+	•	Expressar o histórico de forma simbólica, não invasiva
+	•	Operar 100% offline
+	•	Não executar IA pesada no dispositivo
+	•	Ser sustentável e mantível por uma única pessoa
+
+O sistema não pressiona retorno nem cria dependência artificial.
+Ele aceita pausas e lembra quando o jogador volta.
+
+⸻
+
+PRINCIPAIS ENTREGAS IMPLEMENTADAS
+
+1. Arquitetura Canônica
+
+O sistema foi implementado com domínios isolados, que se comunicam exclusivamente via arquivos JSON validados:
+	•	UI — Leitura simbólica via TUI
+	•	Memória — Grafo factual de eventos
+	•	Governança — Regras de validação e limites
+	•	Execução — Integração com jogos/emuladores
+
+Essa separação garante auditabilidade, clareza e evolução segura  .
+
+⸻
+
+2. Grafo de Memória Factual
+
+O coração do EZ-OS é um grafo de memória armazenado em data/memory_graph.json, composto por:
+
+Nós (Nodes):
+	•	User — Identidade local + seed procedural
+	•	Game — Metadados do jogo
+	•	Event — Eventos reais (START, STOP, ACHIEVEMENT, etc.)
+
+Relações (Edges):
+	•	PLAYED_IN — Evento → Jogo
+	•	CHRONOLOGY — Ordem temporal entre eventos
+
+O grafo é imutável por padrão.
+Narrativas são derivadas, nunca inventadas.
+
+⸻
+
+3. Mascote Simbólico (Companion)
+
+O mascote do EZ-OS é:
+	•	Um leitor do grafo, nunca um decisor
+	•	Representado prioritariamente em ASCII Art
+	•	Gerado de forma procedural determinística, a partir da seed do usuário
+	•	Evolui por fases claras (ex.: Ovo → Jovem → Adulto → Sábio)
+	•	Não simula emoções humanas
+	•	Não fala excessivamente
+
+Ele expressa tempo vivido, não sentimentos.
+
+⸻
+
+4. Interface TUI (Terminal User Interface)
+
+A interface foi construída em Python + biblioteca rich, com foco em:
+	•	Silêncio como estado padrão
+	•	Alto contraste
+	•	Estética retro-futurista
+	•	Total legibilidade em ASCII puro e ambientes degradados
+	•	Layout simples (menu lateral, área central de estado, mascote visível)
+
+A UI não força interação.
+Ela responde quando há algo relevante a mostrar.
+
+⸻
+
+5. Launcher de Integração
+
+Foi implementado um script de launcher que:
+	•	Simula o início e fim de sessões de jogo
+	•	Registra automaticamente eventos START e STOP
+	•	Atualiza o grafo de memória
+	•	Permite testes reais sem dependência de emuladores externos
+
+Isso torna o sistema testável hoje, em ambiente local.
+
+⸻
+
+ESTRUTURA DO PROJETO
+
+O projeto segue uma árvore clara e canônica:
+
+ez-os/
+├── ui/           # Interface TUI
+├── data/         # Grafo de memória e estados persistentes
+├── games/        # Metadados de jogos
+├── packs/        # Pacotes futuros de conteúdo
+├── challenges/   # Desafios e conquistas
+├── system/       # Memória, governança, mascote
+└── scripts/      # Launcher e utilitários
+
+O arquivo ez-os_v1.0.zip contém a implementação completa, funcional e organizada.
+
+⸻
+
+FILOSOFIA IMPLEMENTADA
+
+O EZ-OS foi construído seguindo princípios não negociáveis:
+	•	Nada inventa memória
+	•	Silêncio é o padrão
+	•	Procedural é identidade, não mutação
+	•	Tudo deve sobreviver à degradação (ASCII, 2-bit)
+	•	IA nunca executa no console
+
+Esses princípios já estão refletidos no código, não apenas na documentação  .
+
+⸻
+
+ESTADO ATUAL DO PROJETO
+
+O EZ-OS está:
+	•	✅ Implementado
+	•	✅ Executável em ambiente local
+	•	✅ Pronto para testes contínuos
+	•	✅ Preparado para portabilidade futura (R35S ou similares)
+	•	✅ Conceitualmente estável
+
+Não é um protótipo de ideia.
+É um sistema funcional em evolução controlada.
+
+⸻
+
+FRASE-ÂNCORA DO SISTEMA
+
+“O EZ-OS não tenta prender o jogador.
+Ele apenas lembra quando ele volta.”
+
+⸻
+
+OBJETIVO DESTE DOCUMENTO
+
+Este documento existe para:
+	•	Consolidar o que já foi feito
+	•	Tornar o projeto legível para terceiros
+	•	Servir como base para:
+	•	evolução técnica
+	•	apresentação institucional
+	•	integração com pipelines como Antigravity
+
+Não proponha features novas.
+Não reescreva a filosofia.
+Explique com clareza o que já existe.
+
+Perfeito. Vou acrescentar isso de forma correta e segura, sem comprometer a viabilidade real do EZ-OS.
+
+⚠️ Importante: como estamos lidando com ROMs, a redação precisa ser tecnicamente precisa e juridicamente neutra.
+O EZ-OS não distribui jogos — ele indexa, organiza e integra fontes externas definidas pelo usuário.
+
+Abaixo está o bloco adicional já escrito no formato exato para colar no Manus, mantendo o tom institucional e auditável.
+
+⸻
+
+📚 FONTES DE JOGOS E BASES DE DADOS
+
+(Camada de Indexação e Metadados)
+
+O EZ-OS não hospeda, distribui ou baixa jogos automaticamente.
+Ele opera como um sistema de indexação, organização e memória, trabalhando sobre arquivos fornecidos pelo próprio usuário.
+
+Para isso, o sistema utiliza bases de dados públicas e abertas exclusivamente para metadados, identificação e enriquecimento semântico dos jogos.
+
+⸻
+
+1️⃣ Tipos de Bases Utilizadas
+
+O EZ-OS distingue claramente três camadas de dados:
+
+🔹 Camada A — Arquivos Locais (Usuário)
+	•	ROMs e ISOs fornecidos manualmente pelo usuário
+	•	Dumps pessoais de cartuchos/discos
+	•	Backups legítimos
+
+📌 O EZ-OS nunca assume origem nem executa downloads automáticos.
+
+⸻
+
+🔹 Camada B — Bases Públicas de Metadados
+
+Usadas apenas para:
+	•	nome oficial
+	•	plataforma
+	•	ano
+	•	gênero
+	•	publisher
+	•	identificação por hash
+
+Nenhum conteúdo jogável é obtido dessas fontes.
+
+⸻
+
+🔹 Camada C — Bases Comunitárias (Opcional)
+
+Usadas apenas para:
+	•	capas (quando permitido)
+	•	descrições curtas
+	•	dados históricos
+
+Sempre com fallback para modo offline.
+
+⸻
+
+2️⃣ Bases de Dados Canônicas (Aprovadas)
+
+🎮 Libretro Database (Principal)
+
+Uso: Metadados oficiais + compatibilidade
+Formato: JSON / DAT
+Status: Open-source, amplamente adotada
+
+Utilizada para:
+	•	identificação de jogos
+	•	normalização de nomes
+	•	associação com cores/plataformas
+
+📌 Base padrão do ecossistema RetroArch.
+
+⸻
+
+🕹 No-Intro Database
+
+Uso: Identificação por hash (ROMs de cartucho)
+Formato: DAT
+Status: Comunitária, amplamente reconhecida
+
+Utilizada para:
+	•	detectar duplicatas
+	•	garantir integridade
+	•	diferenciar versões regionais
+
+📌 Usada apenas como referência técnica, nunca para distribuição.
+
+⸻
+
+💿 Redump Database
+
+Uso: Identificação de mídias ópticas (CD/DVD)
+Formato: DAT
+Status: Comunitária
+
+Utilizada para:
+	•	PlayStation
+	•	Sega CD
+	•	Saturn
+	•	outros sistemas baseados em disco
+
+⸻
+
+🧠 IGDB / OpenGameArt (Opcional)
+
+Uso: Enriquecimento semântico
+Formato: API / JSON
+Status: Opcional, nunca obrigatória
+
+Utilizada apenas quando:
+	•	houver conectividade
+	•	o usuário permitir
+	•	não comprometer o modo offline
+
+📌 Pode ser completamente desativada.
+
+⸻
+
+3️⃣ Pipeline de Indexação no EZ-OS
+
+O processo é determinístico e auditável:
+
+ROM fornecida pelo usuário
+        ↓
+Cálculo de hash (CRC / SHA1)
+        ↓
+Consulta a bases de metadados
+        ↓
+Criação do nó "Game" no grafo
+        ↓
+Associação futura com eventos reais
+
+Nenhuma ROM é copiada, enviada ou modificada.
+
+⸻
+
+4️⃣ Integração com o Grafo de Memória
+
+As bases de dados não escrevem memória.
+Elas apenas definem identidade do jogo.
+
+Exemplo de nó Game:
+
+{
+  "id": "game_smw_snes",
+  "name": "Super Mario World",
+  "platform": "SNES",
+  "year": 1990,
+  "source": "No-Intro",
+  "hash": "A1B2C3...",
+  "memory_bound": false
+}
+
+A memória só surge quando eventos reais ocorrem.
+
+⸻
+
+5️⃣ Governança e Conformidade
+
+O EZ-OS adota as seguintes regras:
+	•	❌ Não hospeda ROMs
+	•	❌ Não aponta para downloads ilegais
+	•	❌ Não faz scraping agressivo
+	•	✅ Usa apenas metadados públicos
+	•	✅ Respeita modo offline
+	•	✅ Dá controle total ao usuário
+
+Essas decisões são estruturais, não opcionais.
+
+⸻
+
+6️⃣ Benefícios dessa Abordagem
+	•	Portabilidade internacional
+	•	Segurança jurídica
+	•	Sustentabilidade de longo prazo
+	•	Facilidade de manutenção
+	•	Compatibilidade com RetroArch e forks
+
+⸻
+
+📌 Frase-âncora (bases de dados)
+
+O EZ-OS não coleciona jogos.
+Ele reconhece o que o jogador já possui.
+

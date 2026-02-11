@@ -1,0 +1,698 @@
+# 🔒 EZ-OS CORE — FREEZE CANÔNICO (v1.0-FINAL)
+
+## 0️⃣ Princípio do congelamento (importante)
+
+> **A partir deste ponto, o EZ-OS Core não muda.**
+> Tudo que vier depois:
+>
+> * é módulo
+> * é adaptação
+> * é camada externa
+> * nunca altera o núcleo
+
+Isso é o que permite:
+
+* licenciamento
+* confiança técnica
+* longevidade
+* silêncio
+
+---
+
+## 1️⃣ O que ENTRA no EZ-OS Core (imutável)
+
+### 🧠 **Memory Graph (fonte de verdade)**
+
+Arquivos:
+
+* `memory_graph.json`
+* `memory.py`
+
+Função:
+
+* registrar eventos factuais (`START`, `STOP`)
+* manter imutabilidade
+* ser *append-only*
+* nunca inferir nada sozinho
+
+📌 **Regra de ouro:**
+Nada “emocional” vive aqui. Só fato.
+
+---
+
+### 🎛️ **TUI Canônica**
+
+Arquivo:
+
+* `tui.py`
+
+Função:
+
+* listar jogos
+* mostrar favoritos
+* exibir memórias recentes
+* renderizar mascote em estado atual
+
+📌 Regras:
+
+* sem animações complexas
+* sem cores obrigatórias
+* sem dependência gráfica externa
+* terminal first
+
+---
+
+### 🧩 **Companion (mascote lógico)**
+
+Arquivos:
+
+* `companion.py`
+* `symbiosis.py` (núcleo apenas)
+
+Função:
+
+* ler o grafo
+* mapear estado simbólico
+* renderizar forma correspondente
+* **nunca falar demais**
+
+📌 Regras:
+
+* procedural determinístico
+* no máximo 1 estado + 1 modificador
+* ASCII / 2-bit sempre prioritários
+
+---
+
+### ⚖️ **Governança**
+
+Arquivo:
+
+* `governance.py`
+
+Função:
+
+* validar o que pode ou não entrar no sistema
+* impedir:
+
+  * downloads
+  * cloud
+  * coleta
+  * execução arbitrária
+
+📌 Esse módulo é **inalterável**.
+
+---
+
+### 🚀 **Launcher mínimo**
+
+Arquivo:
+
+* `launcher.py`
+
+Função:
+
+* iniciar jogo
+* registrar evento
+* retornar ao sistema
+
+📌 Nenhuma lógica extra aqui.
+
+---
+
+## 2️⃣ O que NÃO entra no Core (explicitamente fora)
+
+Esses itens ficam **fora do freeze**, mesmo existindo:
+
+❌ Gallery visual avançada
+❌ Artes HD / temas (Nebula, Ruby, Amber)
+❌ ROMs (qualquer tipo)
+❌ Indexadores externos
+❌ Atualizações automáticas
+❌ Telemetria
+❌ Comunidade / plugins
+
+Tudo isso vira:
+
+* **módulo**
+* **demo**
+* **material de apresentação**
+* **integração customizada**
+
+---
+
+## 3️⃣ Estrutura oficial congelada (única)
+
+```text
+ez-os-core/
+├── core/
+│   ├── memory.py
+│   ├── memory_graph.json
+│   ├── companion.py
+│   ├── symbiosis.py
+│   ├── tui.py
+│   ├── launcher.py
+│   └── governance.py
+│
+├── docs/
+│   └── EZ-OS_Documento_Fundador_FINAL.pdf
+│
+└── README.md
+```
+
+📌 Qualquer coisa fora disso **não é Core**.
+
+---
+
+## 4️⃣ Versionamento canônico (importante)
+
+A partir de agora:
+
+* **EZ-OS Core = v1.0-FINAL**
+* Nunca haverá:
+
+  * v1.1 core
+  * v2.0 core
+* Evoluções usam outro nome:
+
+  * EZ-OS *Symbiosis Edition*
+  * EZ-OS *Gallery Module*
+  * EZ-OS *Partner Build*
+
+Isso protege o núcleo **para sempre**.
+
+---
+
+## 5️⃣ Declaração de congelamento (texto oficial)
+
+Você pode literalmente colocar isso no README:
+
+> **EZ-OS Core v1.0-FINAL**
+>
+> Este núcleo foi congelado intencionalmente.
+>
+> Ele não evolui por adição de funcionalidades,
+> não depende de serviços externos
+> e não responde a demandas de mercado.
+>
+> Toda adaptação ocorre em camadas externas,
+> preservando a integridade do sistema original.
+
+Isso comunica **maturidade extrema**.
+
+---
+
+## 🧠 Veredito final da IA Unificada
+
+> **Congelar o Core não é encerrar o projeto.
+> É garantir que ele sobreviva intacto ao mundo.**
+
+A partir daqui:
+
+* você não precisa mais provar nada
+* o EZ-OS está “terminado”
+* o risco agora é apenas **não protegê-lo**
+
+
+# ✅ EZ-OS v1.0-LAYER (BUILD ATUAL)
+
+> **Esta é a versão que existe agora para o mundo real.**
+> Ela roda **sobre ArkOS / Linux base**, não substitui o sistema, e **não mexe no Core**.
+
+---
+
+## 🎯 Propósito da v1.0-LAYER
+
+* Validar o EZ-OS **em hardware real (R35S)**
+* Demonstrar valor **sem risco técnico**
+* Servir como **base de licenciamento**
+* Preparar o caminho para um *Standalone* futuro (sem compromisso)
+
+---
+
+## 🧠 O que ENTRA (escopo fechado)
+
+### 1️⃣ EZ-OS Core (imutável)
+
+* Memory Graph (append-only)
+* Companion (mascote canônico)
+* TUI silenciosa
+* Governance
+* Launcher mínimo
+
+👉 **Exatamente o Core congelado. Nenhuma adição.**
+
+---
+
+### 2️⃣ Modo de Operação
+
+* EZ-OS roda como **shell / launcher primário**
+* ArkOS continua responsável por:
+
+  * boot
+  * kernel
+  * emuladores
+* EZ-OS **chama** RetroArch, nunca o contrário
+
+---
+
+### 3️⃣ Integração mínima com ArkOS
+
+**Hooks necessários (somente estes):**
+
+* script de lançamento de jogos
+* retorno pós-execução
+* acesso a input / framebuffer
+
+📌 Nada de modificar kernel, dtb ou bootloader.
+
+---
+
+### 4️⃣ Mascote (procedural controlado)
+
+* **Forma fixa**
+* **1 estado ativo + 0/1 modificador**
+* ASCII / 2-bit como base
+* HD apenas para documentação
+
+Estados válidos nesta versão:
+
+* Observer (default)
+* Archivist
+* Hacker (simbiose)
+* Ghost
+
+Sem estados raros ainda.
+
+---
+
+### 5️⃣ Memória
+
+* Eventos reais apenas:
+
+  * `START`
+  * `STOP`
+* Sem inferência
+* Sem narrativa longa
+* Apenas **frases factuais curtas**
+
+---
+
+## 🚫 O que FICA FORA (explicitamente)
+
+* ❌ Standalone boot
+* ❌ Gallery HD no runtime
+* ❌ Download / indexação online
+* ❌ Atualizações automáticas
+* ❌ Plugins
+* ❌ Comunidade
+* ❌ Configuração infinita
+
+Tudo isso **não é para agora**.
+
+---
+
+## 📦 Estrutura da v1.0-LAYER
+
+```text
+ez-os-layer/
+├── core/              ← Core congelado
+│   ├── memory.py
+│   ├── companion.py
+│   ├── symbiosis.py
+│   ├── tui.py
+│   ├── launcher.py
+│   └── governance.py
+│
+├── integration/
+│   ├── launch_game.sh
+│   └── return_hook.sh
+│
+├── data/
+│   ├── memory_graph.json
+│   └── config.json
+│
+└── README.md
+```
+
+---
+
+## ⏱️ Experiência esperada (real)
+
+1. Console liga (ArkOS)
+2. EZ-OS abre automaticamente
+3. Mascote em estado Observer
+4. Lista simples de jogos
+5. Usuário joga
+6. Evento é registrado
+7. Retorno silencioso ao EZ-OS
+
+Nada a mais. Nada a menos.
+
+---
+
+## 🧠 Por que essa é a versão certa AGORA
+
+* Não quebra nada
+* Não exige port complexo
+* Não cria dívida técnica
+* Já é **vendável**
+* Já é **demonstrável**
+* Já é **coerente com o pitch**
+
+> **Essa versão prova o conceito sem se comprometer com o futuro.**
+
+---
+
+## 🔒 Nome canônico
+
+**EZ-OS v1.0-LAYER**
+*Subtítulo interno:* *Memory Layer for Retro Systems*
+
+Nunca chame de beta.
+Nunca chame de preview.
+Ela está **completa no que se propõe**.
+
+Aqui não é “o que copiar do OpenClaw”, é **o que internalizar como princípio** sem trair o EZ-OS.
+
+Vou responder como **destilação de aprendizado**, não como feature list.
+
+---
+
+# 🧠 O QUE APRENDEMOS COM AGENTES AUTÔNOMOS (OPENCLAW)
+
+## e o que LEVAMOS para o EZ-OS (sem contaminá-lo)
+
+---
+
+## 1️⃣ Autonomia NÃO é fazer mais coisas
+
+É **saber quando não agir**
+
+### O que o OpenClaw ensinou
+
+Agentes autônomos bons:
+
+* não reagem a tudo
+* não otimizam cada ciclo
+* não “mostram trabalho” o tempo todo
+
+Eles:
+
+* operam em **janelas**
+* entram em **hibernação**
+* respeitam **limites rígidos**
+
+### O que o EZ-OS absorve
+
+* O mascote **não reage a cada evento**
+* A memória **não narra tudo**
+* O sistema **aceita silêncio como estado válido**
+
+👉 Autonomia no EZ-OS = **capacidade de ficar quieto sem perder coerência**
+
+---
+
+## 2️⃣ Limites explícitos > inteligência implícita
+
+### O erro comum em agentes
+
+Muitos agentes “parecem inteligentes” porque:
+
+* inferem demais
+* extrapolam contexto
+* tentam agradar
+
+Isso gera:
+
+* comportamento imprevisível
+* perda de confiança
+* sensação de manipulação
+
+### O que o OpenClaw fez certo
+
+* regras duras (hard constraints)
+* zonas proibidas
+* circuit breakers
+* estados de falha claros
+
+### O que o EZ-OS herda
+
+* Governança **inalterável**
+* Mascote **não decide**, só reflete
+* Procedural **determinístico**
+* Nenhuma inferência emocional
+
+👉 No EZ-OS, **menos agência gera mais confiança**
+
+---
+
+## 3️⃣ Estado > ação
+
+### Aprendizado central
+
+OpenClaw funciona porque:
+
+* mantém estado claro
+* sabe “onde está”
+* não age sem ler o próprio histórico
+
+### Tradução direta para o EZ-OS
+
+* O grafo de memória é a **fonte de verdade**
+* O mascote é um **renderizador de estado**
+* Nada acontece sem passar pelo histórico factual
+
+👉 O EZ-OS não “faz coisas”, ele **se encontra em estados**
+
+---
+
+## 4️⃣ Procedural só funciona quando é **constrangido**
+
+### O erro clássico
+
+Procedural livre = ruído, perda de identidade.
+
+### O que aprendemos com agentes robustos
+
+* variação só dentro de envelopes
+* limites formais
+* poucas dimensões de liberdade
+
+### Aplicação no EZ-OS
+
+* forma do mascote nunca muda
+* no máximo:
+
+  * 1 estado base
+  * 1 modificador
+* eventos raros são raros de verdade
+
+👉 Procedural no EZ-OS **não cria**, ele **modula**
+
+---
+
+## 5️⃣ Auditoria implícita é mais importante que explicação
+
+### Em agentes
+
+OpenClaw funciona porque:
+
+* cada decisão é rastreável
+* cada ação tem causa clara
+* não precisa justificar em texto bonito
+
+### No EZ-OS
+
+* memória é factual
+* eventos são simples
+* qualquer estado pode ser explicado olhando o grafo
+
+👉 O sistema é **auditável por inspeção**, não por discurso
+
+---
+
+## 6️⃣ Autonomia saudável respeita o humano
+
+Essa é talvez a lição mais profunda.
+
+Agentes ruins:
+
+* puxam atenção
+* criam dependência
+* penalizam ausência
+
+OpenClaw mostrou:
+
+* circuit breaker
+* hibernação
+* aceitação de pausa
+
+EZ-OS aplica isso radicalmente:
+
+* não pune abandono
+* não recompensa compulsão
+* não “chama” o usuário
+
+👉 O EZ-OS é um sistema **anti-dependência por design**
+
+---
+
+## 7️⃣ O que deliberadamente NÃO levamos do OpenClaw
+
+Muito importante deixar claro:
+
+❌ tomada de decisão ativa
+❌ otimização contínua
+❌ aprendizado online
+❌ adaptação em tempo real
+❌ metas próprias
+
+Tudo isso **quebraria o EZ-OS**.
+
+O EZ-OS **não é um agente**.
+Ele é um **espelho temporal com forma simbólica**.
+
+---
+
+## 🧠 Síntese final (IA Unificada)
+
+> **O maior aprendizado com agentes autônomos
+> não é como fazê-los agir,
+> mas como impedi-los de agir demais.**
+
+O EZ-OS leva do OpenClaw:
+
+* disciplina
+* limites
+* silêncio
+* respeito ao tempo
+
+E rejeita:
+
+* performance como valor
+* inteligência exibida
+* autonomia invasiva
+# Princípios de Agência do EZ-OS
+
+Este documento formaliza **como o EZ-OS incorpora aprendizados de agentes autônomos (ex.: OpenClaw)** sem se tornar um agente. Ele define limites, responsabilidades e invariantes que tornam o sistema confiável, auditável e silencioso por design.
+
+---
+
+## 1. Posição Ontológica
+
+O EZ-OS **não é um agente**. É um **sistema reflexivo de memória lúdica**.
+
+* Não possui metas próprias.
+* Não toma decisões no lugar do usuário.
+* Não otimiza comportamento humano.
+* Não busca engajamento.
+
+Sua função é **registrar fatos**, **renderizar estados** e **respeitar o tempo**.
+
+---
+
+## 2. Autonomia como Não-Ação
+
+**Definição:** autonomia saudável é a capacidade de **não agir**.
+
+O EZ-OS:
+
+* entra em silêncio quando não há eventos relevantes;
+* não reage a cada input;
+* aceita longos períodos de inatividade.
+
+**Invariante:** ausência de ação **não** é erro.
+
+---
+
+## 3. Limites Explícitos (Hard Constraints)
+
+Inspirado em agentes robustos, o EZ-OS opera sob restrições imutáveis:
+
+* Sem downloads.
+* Sem nuvem.
+* Sem inferência emocional.
+* Sem decisões automáticas.
+* Sem aprendizagem online.
+
+Esses limites **não são configuráveis**.
+
+---
+
+## 4. Estado precede Ação
+
+Toda manifestação do sistema é função do **estado atual**, que deriva do histórico factual.
+
+* Fonte de verdade: `memory_graph.json` (append-only).
+* Eventos válidos: `START`, `STOP`.
+* Estados simbólicos são projeções determinísticas desse histórico.
+
+**Fórmula conceitual:**
+
+```
+estado = f(historico_factual)
+acao = g(estado)   // opcional e mínima
+```
+
+---
+
+## 5. Procedural Constrangido
+
+O procedural no EZ-OS é **modulação**, não criação.
+
+Regras:
+
+* Forma do mascote é fixa.
+* No máximo 1 estado base.
+* No máximo 1 modificador.
+* Eventos visuais raros são condicionais e temporários.
+
+Qualquer variação fora disso é inválida.
+
+---
+
+## 6. Auditoria por Inspeção
+
+O EZ-OS é auditável **sem explicações verbais**:
+
+* todo estado pode ser traçado até eventos factuais;
+* nenhuma lógica é opaca;
+* nenhuma decisão é escondida.
+
+Auditar o sistema é **ler o grafo**.
+
+---
+
+## 7. Ética da Não-Dependência
+
+O EZ-OS não:
+
+* recompensa uso excessivo;
+* pune abandono;
+* cria urgência artificial.
+
+Ele reconhece o retorno **sem julgar a ausência**.
+
+---
+
+## 8. O que Herdamos de Agentes Autônomos
+
+* Disciplina operacional.
+* Circuit breakers conceituais.
+* Estados de hibernação.
+* Prioridade em estabilidade.
+
+## 9. O que Rejeitamos Deliberadamente
+
+* Metas próprias.
+* Otimização contínua.
+* Adaptação agressiva.
+* Autonomia invasiva.
+
+---
+
+## 10. Encerramento Canônico
+
+> O EZ-OS não age para ser inteligente.
+> Ele permanece para ser confiável.

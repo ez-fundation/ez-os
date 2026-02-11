@@ -1,10 +1,14 @@
-# EZ-OS: Sistema Operacional de Memória Lúdica Offline
+# EZ-OS: Ludic Memory Operating System
 
 <div align="center">
 
+[![Português](https://img.shields.io/badge/Lang-Português-green)](README_pt.md)
+
 ![EZ-OS Mascot](assets/01_mascot_base.png)
 
-**Um sistema de memória factual para jogos retro que registra eventos reais e expressa o histórico através de um mascote procedural determinístico.**
+**A factual memory system for retro games that records real events and expresses history through a deterministic procedural mascot.**
+
+`#python` `#retro-gaming` `#memory-system` `#procedural-generation` `#ez-fundation` `#digital-sovereignty`
 
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![EZ-Fundation](https://img.shields.io/badge/Part%20of-EZ--Fundation-purple)](https://github.com/ez-fundation)
@@ -14,49 +18,49 @@
 
 ---
 
-## 🎯 O que é o EZ-OS?
+## 🎯 What is EZ-OS?
 
-O **EZ-OS** (Easy Operating System) é um Sistema Operacional de Memória Lúdica. Sua função primordial é o **registro factual de eventos de uso** e a **expressão simbólica desse histórico**, operando de forma leve, offline e agnóstica de hardware.
+**EZ-OS** (Easy Operating System) is a Ludic Memory Operating System. Its primordial function is the **factual recording of usage events** and the **symbolic expression of this history**, operating in a lightweight, offline, and hardware-agnostic manner.
 
-### Princípios Não Negociáveis
+### Non-Negotiable Principles
 
-- **Factualidade da Memória**: Registra apenas eventos reais
-- **Estado Padrão de Silêncio**: Comunicação apenas quando relevante
-- **Identidade Procedural Determinística**: Evolução baseada em dados reais e sementes únicas
-- **Resiliência à Degradação**: Funcionalidade em ASCII/2-bit
-- **Isolamento de IA**: Processamento pesado é externo e opcional
-
----
-
-## 🏛️ Contexto EZ-Fundation
-
-O EZ-OS é o **Kernel de Memória Lúdica** da [EZ-Fundation](https://github.com/ez-fundation).
-
-- **Identity**: Consome identidades do `EZ-Character`.
-- **Memory**: Gera e preserva o grafo de memória do usuário.
-- **Sovereignty**: Garante que os dados de "Proof of Play" pertençam ao usuário.
+- **Memory Factuality**: Records only real events.
+- **Default Silence State**: Communicates only when relevant.
+- **Deterministic Procedural Identity**: Evolution based on real data and unique seeds.
+- **Degradation Resilience**: Functionality in ASCII/2-bit environments.
+- **AI Isolation**: Heavy processing is external and optional.
 
 ---
 
-## 🚀 Instalação
+## 🏛️ EZ-Fundation Context
 
-### Requisitos
+EZ-OS is the **Ludic Memory Kernel** of [EZ-Fundation](https://github.com/ez-fundation).
+
+- **Identity**: Consumes identities from `EZ-Character`.
+- **Memory**: Generates and preserves the user's memory graph.
+- **Sovereignty**: Ensures "Proof of Play" data belongs to the user.
+
+---
+
+## 🚀 Installation
+
+### Requirements
 
 - Python 3.9+
 - pip
 
-### Instalação via pip (Modo Desenvolvimento)
+### Installation via pip (Development Mode)
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/ez-fundation/ez-os.git
 cd ez-os
 
-# Instale em modo desenvolvimento
+# Install in editable mode
 pip install -e .
 ```
 
-### Instalação de Dependências
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -64,90 +68,100 @@ pip install -r requirements.txt
 
 ---
 
-## 📖 Uso
+## 📖 Usage
 
-### Iniciar o EZ-OS
+### Start EZ-OS
 
 ```bash
 ez-os
 ```
 
-### Uso Programático
+### Programmatic Usage
 
 ```python
 from ez_os.core import memory, companion, governance
 from ez_os.ui import tui
 from ez_os.launcher import launcher
 
-# Carregar grafo de memória
+# Load memory graph
 graph = memory.load_graph("data/memory_graph.json")
 
-# Atualizar estado do mascote
+# Update mascot state
 mascot = companion.update_state(graph)
 
-# Renderizar TUI
+# Render TUI
 tui.render(mascot, graph)
 ```
 
 ---
 
-## 🏗️ Arquitetura
+## 🏗️ Architecture
 
-O EZ-OS é composto por domínios isolados:
+EZ-OS is composed of isolated domains:
 
 ### **Core**
-- `memory.py`: Grafo factual em JSON (CRUD)
-- `governance.py`: Validação e limites rígidos
-- `companion.py`: Mascote procedural determinístico
+- `memory.py`: Factual JSON Graph (CRUD)
+- `governance.py`: Validation and strict limits
+- `companion.py`: Deterministic procedural mascot
 
 ### **UI**
-- `tui.py`: Renderização simbólica em terminal (via `rich`)
+- `tui.py`: Symbolic terminal rendering (via `rich`)
 
 ### **Launcher**
-- `launcher.py`: Launcher mínimo para integração com RetroArch
-- `indexer.py`: Indexação de ROMs
+- `launcher.py`: Minimal launcher for RetroArch integration
+- `indexer.py`: ROM indexing
 
 ### **Extensions**
-- `gallery.py`: Galeria de jogos
-- `symbiosis.py`: Integração simbiótica com sistemas externos
+- `gallery.py`: Game gallery
+- `symbiosis.py`: Symbiotic integration with external systems
 
 ---
 
-## 🎨 Mascote & Variações
+## 🎨 Mascot & Variations
 
 <div align="center">
 
-![Mascote Variations](assets/02_mascot_variations.png)
+![Mascot Variations](assets/02_mascot_variations.png)
 
-*O mascote evolui deterministicamente baseado no histórico de uso*
+*The mascot evolves deterministically based on usage history*
 
+</div>
+
+### **Design Evolution**
+
+> **Architect's Note**: The v2 iteration serves as the definitive multi-angle study for 3D modeling.
+
+<div align="center">
+  <img src="assets/11_concept_feb07_v2.png" width="400" alt="Mascot Design Study (Multi-Angle)">
+  <p><em>Fig 2. Design Study: Volume & Angles Reference</em></p>
 </div>
 
 ---
 
-## 📚 Documentação
+## 📚 Documentation
 
-- [Arquitetura Técnica](docs/architecture.md)
-- [Filosofia e Princípios](docs/philosophy.md)
-- [Contexto EZ-Fundation](docs/ez-fundation_context.md)
-- [Guia de Catalogação de Assets](docs/asset_catalog_guide.md)
-- [Design de Personagem 3D](docs/character_design.md)
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Por favor, leia nosso guia de contribuição antes de enviar um PR.
+- [Technical Architecture](docs/architecture.md)
+- [Philosophy & Principles](docs/philosophy.md)
+- [EZ-Fundation Context](docs/ez-fundation_context.md)
+- [Asset Catalog Guide](docs/asset_catalog_guide.md)
+- [3D Character Design](docs/character_design.md)
+- [🎨 Visual Gallery & Artbook](docs/gallery.md)
 
 ---
 
-## 📄 Licença
+## 🤝 Contributing
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Contributions are welcome! Please read our contributing guide before submitting a PR.
 
 ---
 
-## 👤 Autor
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 Author
 
 **João** - [ez-fundation](https://github.com/ez-fundation)
 
@@ -155,7 +169,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 <div align="center">
 
-*O EZ-OS não tenta prender o jogador. Ele apenas lembra quando ele volta.*
+*EZ-OS does not try to trap the player. It only remembers when they return.*
 
 ![EZ-OS Logo](assets/04_brand_logo_character.png)
 

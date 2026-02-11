@@ -1,0 +1,203 @@
+# EZ-OS Standalone Architecture
+
+Este documento descreve a arquitetura **standalone** do EZ-OS — quando ele opera como sistema primário, não apenas como camada sobre outro OS. O objetivo é manter o **EZ-OS Core congelado** e mover toda a complexidade para camadas inferiores (boot) ou externas (módulos opcionais).
+
+---
+
+## 1. Princípios de Projeto (Imutáveis)
+
+* **Core congelado**: memória, mascote, TUI e governança não mudam.
+* **Offline-first real**: nenhum serviço de rede obrigatório no boot.
+* **Silêncio como padrão**: boot direto para a experiência EZ-OS.
+* **Generalidade mínima**: suporte apenas ao hardware alvo.
+* **Falha graciosa**: se algo externo falhar, o EZ-OS ainda sobe.
+
+---
+
+## 2. Visão Geral da Pilha Standalone
+
+```
+[ Boot ROM / SD ]
+        ↓
+[ U-Boot (mínimo) ]
+        ↓
+[ Linux Kernel (custom, mínimo) ]
+        ↓
+[ Init (BusyBox init) ]
+        ↓
+[ Runtime Base ]
+  ├── framebuffer
+  ├── input (evdev)
+  ├── áudio (ALSA)
+        ↓
+[ RetroArch + Emuladores ]
+        ↓
+[ EZ-OS Core ]  ← shell primário
+```
+
+O EZ-OS **não substitui Linux**; ele substitui *a experiência de usuário*.
+
+---
+
+## 3. Componentes Detalhados
+
+### 3.1 Bootloader (U-Boot)
+
+**Responsabilidade:**
+
+* Inicializar hardware básico
+* Carregar kernel + initramfs
+* Mostrar splash opcional (EZ-OS minimal)
+
+**Requisitos mínimos:**
+
+* Suporte ao SoC (ex.: rk3326)
+* Boot via SD
+* Configuração fixa (sem menu)
+
+---
+
+### 3.2 Kernel Linux (mínimo)
+
+**Configuração:**
+
+* Compilação específica por SoC
+* Sem drivers desnecessários
+* Framebuffer simples
+* Input (joystick/botões)
+* Áudio básico
+
+**Não incluir:**
+
+* Wi‑Fi
+* Bluetooth
+* Power management avançado (opcional)
+
+---
+
+### 3.3 Init / Sistema Base
+
+**Ferramentas:**
+
+* BusyBox
+* init simples (rcS)
+
+**Funções:**
+
+* Montar rootfs
+* Montar partição de dados
+* Iniciar serviços mínimos
+* Lançar EZ-OS automaticamente
+
+---
+
+### 3.4 Runtime Base
+
+Componentes necessários para o EZ-OS operar:
+
+* `/dev/fb0` (framebuffer)
+* `/dev/input/*` (controles)
+* ALSA (som)
+* relógio do sistema (RTC ou fallback)
+
+Nenhum window manager.
+
+---
+
+### 3.5 RetroArch + Emuladores
+
+**Função:**
+
+* Execução de jogos
+
+**Integração:**
+
+* Chamados exclusivamente pelo launcher do EZ-OS
+* Sem acesso direto ao usuário
+
+---
+
+### 3.6 EZ-OS Core (Shell Primário)
+
+**Inicia automaticamente após boot.**
+
+Responsabilidades:
+
+* Renderizar TUI
+* Ler grafo de memória
+* Exibir mascote
+* Lançar jogos
+* Registrar eventos
+
+**Não faz:**
+
+* Gerenciamento de hardware
+* Downloads
+* Atualizações
+
+---
+
+## 4. Fluxo de Boot Standalone
+
+1. Dispositivo liga
+2. U-Boot carrega kernel
+3. Kernel inicializa drivers mínimos
+4. BusyBox init monta sistema
+5. EZ-OS Core é iniciado
+6. Usuário vê a interface diretamente
+
+Tempo alvo: **< 5 segundos**.
+
+---
+
+## 5. Estrutura de Arquivos (Standalone)
+
+```
+/
+├── boot/
+│   ├── Image
+│   ├── uInitrd
+│   └── dtb/
+├── bin/        (BusyBox)
+├── lib/
+├── etc/
+│   └── init.d/
+├── usr/
+│   ├── retroarch/
+│   └── emulators/
+├── ez-os/
+│   ├── core/
+│   └── data/
+└── data/
+    ├── roms/
+    └── saves/
+```
+
+---
+
+## 6. O que Continua Fora do Standalone
+
+* Gallery HD
+* Temas gráficos pesados
+* Comunidade / plugins
+* Telemetria
+* Cloud
+
+---
+
+## 7. Critério de Uso do Standalone
+
+EZ-OS deve rodar como sistema **apenas quando**:
+
+* Experiência autoral total é exigida
+* Hardware é controlado
+* Não há necessidade de compatibilidade ampla
+
+---
+
+## 8. Resumo Canônico
+
+> EZ-OS Standalone não é uma distro.
+> É um **ambiente intencional**.
+> Linux está lá para sustentar.
+> O EZ-OS está lá para significar.

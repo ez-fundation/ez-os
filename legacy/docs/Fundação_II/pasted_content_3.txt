@@ -1,0 +1,238 @@
+ **estrutural e definitiva**.
+
+Você quer duas coisas:
+
+1. **Formato ideal da skill**
+2. **API mínima para rodar em múltiplos dispositivos**
+
+Vou entregar as duas — mas com uma regra central:
+
+> A skill nunca altera o Core.
+> Ela só interpreta estado e projeta representação.
+
+Nada de agência ativa.
+
+---
+
+# 🧠 1️⃣ FORMATO IDEAL DA SKILL
+
+`symbiotic-memory-system.skill`
+
+A skill deve ser:
+
+* Declarativa
+* Determinística
+* Sem efeitos colaterais
+* Sem dependências externas obrigatórias
+* Auditável por inspeção
+
+---
+
+## 🔷 Estrutura Conceitual da Skill
+
+```yaml
+skill:
+  name: symbiotic-memory-system
+  version: 1.0
+  type: reflective-layer
+  requires:
+    - memory_graph
+  capabilities:
+    - render_state
+    - compute_state
+  constraints:
+    - no_network
+    - no_learning
+    - no_mutation_of_core
+    - deterministic_only
+```
+
+---
+
+## 🔷 Bloco de Definição de Estado
+
+A skill não decide nada.
+Ela apenas mapeia eventos factuais → estado simbólico.
+
+```yaml
+state_mapping:
+  observer:
+    condition: "no_recent_activity"
+  archivist:
+    condition: "long_idle_period"
+  hacker:
+    condition: "high_activity_burst"
+  ghost:
+    condition: "abandoned_sessions"
+```
+
+Essas condições devem ser:
+
+* puramente baseadas em timestamps e contagem
+* sem interpretação emocional
+* sem heurísticas complexas
+
+---
+
+## 🔷 Bloco de Renderização
+
+```yaml
+render:
+  ascii: true
+  bit2: true
+  max_states: 1
+  max_modifiers: 1
+  allow_animation: false
+```
+
+---
+
+## 🔷 Limites explícitos (obrigatórios)
+
+```yaml
+guardrails:
+  allow_external_io: false
+  allow_self_modification: false
+  allow_autonomous_action: false
+  allow_goal_generation: false
+```
+
+Isso garante que a skill nunca vire agente.
+
+---
+
+# 🧩 2️⃣ API MÍNIMA MULTIDISPOSITIVO
+
+Agora vem a parte mais importante.
+
+Se o EZ-OS for primitivo universal, a API deve ser **ridiculamente pequena**.
+
+---
+
+## 🎯 API Conceitual
+
+### Entrada obrigatória
+
+```json
+{
+  "memory_graph": {...},
+  "device_context": {
+    "device_type": "console | pi | desktop | edge",
+    "display_mode": "ascii | bit2 | framebuffer",
+    "input_type": "buttons | keyboard | touch"
+  }
+}
+```
+
+---
+
+### Saída da skill
+
+```json
+{
+  "state": "observer",
+  "modifier": null,
+  "render_payload": {
+    "ascii": "...",
+    "bit2": "...",
+    "metadata": {
+      "confidence": 1.0,
+      "deterministic": true
+    }
+  }
+}
+```
+
+Nada mais.
+
+Sem comandos.
+Sem execução.
+Sem instruções ao sistema.
+
+---
+
+# 🔒 Interface mínima obrigatória para qualquer dispositivo
+
+Para que o EZ-OS rode como camada simbiótica em qualquer dispositivo, o hospedeiro só precisa oferecer:
+
+### 1️⃣ Acesso ao grafo factual
+
+Arquivo ou stream JSON append-only.
+
+### 2️⃣ Um método de renderização
+
+* terminal
+* framebuffer
+* e-ink
+* display simples
+
+### 3️⃣ Um gatilho de evento
+
+* start
+* stop
+
+Não precisa:
+
+* internet
+* banco de dados complexo
+* GPU
+* daemon permanente
+
+---
+
+# 🧠 Modelo Universal de Hospedagem
+
+Qualquer dispositivo que consiga:
+
+```
+Ler JSON
+Renderizar texto
+Registrar timestamp
+```
+
+Pode hospedar o EZ-OS.
+
+Isso inclui:
+
+* Raspberry Pi
+* Mini PC
+* Handheld
+* E-ink device
+* Thin client
+* Router modificado
+* Microcomputador educacional
+
+---
+
+# 🔥 A Decisão Arquitetural Mais Importante
+
+Você precisa manter isso simples.
+
+Se a skill:
+
+* começar a adaptar demais
+* começar a inferir demais
+* começar a decidir demais
+
+Ela vira um agente.
+
+E o EZ-OS deixa de ser primitivo reflexivo.
+
+---
+
+# 🧠 Síntese Final
+
+O formato ideal da skill deve ser:
+
+* Declarativo
+* Determinístico
+* Auditável
+* Não-agente
+* Portável
+* Dependente apenas de memória factual
+
+A API mínima deve ser:
+
+```
+input: memory_graph + device_context
+output: symbolic_state

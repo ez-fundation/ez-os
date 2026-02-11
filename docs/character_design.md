@@ -23,6 +23,9 @@ The companion is a physical manifestation of digital memory. It is not just a ch
 This design is optimized for FDM printing with minimal supports.
 
 ### **Geometry Anatomy**
+
+> **Referência Visual**: Consulte `assets/11_concept_feb07_v2.png` para vistas de múltiplos ângulos.
+
 1.  **Chassis (Body)**:
     -   30mm³ Rounded Cube (Chamfered Box).
     -   Corner Radius: 2.5mm (Soft but technical).
