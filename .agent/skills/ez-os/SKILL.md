@@ -10,7 +10,8 @@ description: Official Skill for the EZ-OS (Ludic Memory Operating System). Defin
 ## 1. 🏛️ EZ-Fundation Protocols
 This repository is a property of **EZ-Fundation**. All contributions must serve the ecosystem.
 - **Unified Vision**: We build the "Sovereign Web".
-- **Nano Banana Design**: This is our *aesthetic language* (Low Tech, High Soul), not our identity.
+- **Arkos Compatibility**: EZ-OS runs as the *Soul Layer* (L2) atop the **Arkos Kernel** (L1).
+- **Nano Banana Design**: This is our *aesthetic language* (Low Tech, High Soul).
 - **The Bard's Legacy**: We preserve memory where others hallucinate.
 
 ## 2. 🏗️ Architecture & Constraints
