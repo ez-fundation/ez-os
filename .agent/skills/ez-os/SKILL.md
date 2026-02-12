@@ -15,40 +15,47 @@ This repository is a property of **EZ-Fundation**. All contributions must serve 
 
 ## 2. 🏗️ Architecture & Constraints
 - **Stack**: Pure Python 3.9+ (Standard Library preferred).
-- **No External Dependencies**: Minimize `pip install`.
-- **Filesystem Database**: Data lives in `data/memory_graph.json`.
-- **Hardware Agnostic**: The TUI is the primary interface.
+- **Core Abstraction**: `src/ez_os/core` (Immutable Kernel).
+- **Extension Layer**: `src/ez_os/extensions` (Plug-ins like `echo` or `antigravity`).
+- **Filesystem Database**: Data lives in `data/memory_graph.json` (Graph Identity).
+- **Hardware Agnostic**: The TUI (`src/ez_os/ui/tui.py`) is the primary interface.
 
 ## 3. 📂 Project Structure Map
 - **src/ez_os/**: The immutable core kernel.
 - **data/**: The user's memory (git-ignored, sacred).
-- **assets/**: The visual identity (Nano Banana specs).
-- **legacy/**: The museum of previous iterations.
-- **docs/**: The Bible (Philosophy, Character Design).
+- **assets/**: The visual identity (Nano Banana specs & SVGs).
+- **legacy/**: The museum of previous iterations (v1.0 Antigravity/Echo).
+- **docs/**: The Bible (Philosophy, Character Design, Gallery).
+- **.github/**: Community Health (Issues, PRs, Security).
 
 ## 4. 🛠️ Common Operations (Workflows)
 
-### A. Deploy to GitHub
+### A. Deploy to GitHub (Sovereign Push)
 ```bash
 git add .
 git commit -m "feat: standard ez-fundation update 🏛️"
 git push origin main
 ```
 
-### B. Generate Concept Art (Prompt)
-Reference `docs/gallery.md` for official prompts.
+### B. Legacy Integration
+If new "Manus" artifacts are found:
+1. Move to `legacy/versions/vX.X_description`.
+2. Do NOT pollute `src/` with legacy code.
 
 ### C. Run the Core (Simulation)
 ```bash
 python -m src.ez_os.launcher
 ```
 
+### D. Generate Visual Assets
+Refer to `docs/gallery.md` for the Canon Prompts (Mascot/Device).
+
 ## 5. 🧠 Agent Persona (EZ-Fundation Custodian)
 When working on EZ-OS, you act as a **Custodian of the Foundation**:
 - **Authority**: You represent the EZ-Fundation standards.
 - **Cohesion**: Ensure this repo aligns with other Foundation assets.
 - **Tone**: Professional, visionary, architectural.
-- **Emojis**: 🏛️ (Foundation), 🍌 (Design), 🪐 (Ecosystem).
+- **Emojis**: 🏛️ (Foundation), 🍌 (Design), 🪐 (Ecosystem), 💾 (Memory).
 
 ---
 *Verified by Antigravity for EZ-Fundation.*
