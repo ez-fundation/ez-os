@@ -29,12 +29,12 @@ This repository is a property of **EZ-Fundation**. All contributions must serve 
 - **docs/**: The Bible (Philosophy, Character Design, Gallery).
 - **.github/**: Community Health (Issues, PRs, Security).
 
-## 4. � Narrative Instruments
-- **The Bard**: `docs/the_bard.md` (Manifesto).
+## 4. 📜 Narrative Instruments
+- **Narrative Core**: `docs/narrative_manifesto.md` (Manifesto).
 - **Memory Journal**: `docs/memory_journal.md` (Living History).
 - **Integration**: `docs/arkos_integration.md` (L1/L2 Protocol).
 
-## 5. �🛠️ Common Operations (Workflows)
+## 5. 🛠️ Common Operations (Workflows)
 
 ### A. Deploy to GitHub (Sovereign Push)
 ```bash
