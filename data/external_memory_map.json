@@ -1,0 +1,88 @@
+{
+  "systems": {
+    "pcengine": {
+      "saves": 6,
+      "roms": 359
+    },
+    "nes": {
+      "saves": 2,
+      "roms": 500
+    },
+    "cps1": {
+      "saves": 4,
+      "roms": 32
+    },
+    "famicom": {
+      "saves": 2,
+      "roms": 1639
+    },
+    "snes": {
+      "saves": 7,
+      "roms": 1332
+    },
+    "mame2003": {
+      "saves": 1,
+      "roms": 1934
+    },
+    "megadrive": {
+      "saves": 2,
+      "roms": 1229
+    },
+    "cps2": {
+      "saves": 0,
+      "roms": 37
+    },
+    "psx": {
+      "saves": 6,
+      "roms": 23
+    },
+    "gamegear": {
+      "saves": 7,
+      "roms": 269
+    },
+    "n64": {
+      "saves": 11,
+      "roms": 215
+    },
+    "gbc": {
+      "saves": 4,
+      "roms": 2099
+    },
+    "psp": {
+      "saves": 0,
+      "roms": 25
+    },
+    "nds": {
+      "saves": 0,
+      "roms": 15
+    },
+    "gba": {
+      "saves": 21,
+      "roms": 1071
+    },
+    "neogeo": {
+      "saves": 0,
+      "roms": 205
+    },
+    "cps3": {
+      "saves": 0,
+      "roms": 4
+    },
+    "gb": {
+      "saves": 0,
+      "roms": 3675
+    },
+    "sfc": {
+      "saves": 3,
+      "roms": 451
+    },
+    "dreamcast": {
+      "saves": 0,
+      "roms": 4
+    }
+  },
+  "scan_date": "2026-02-13T14:18:35.3013975-03:00",
+  "total_saves": 76,
+  "total_roms": 15118,
+  "source": "R36S EASYROMS (E:)"
+}

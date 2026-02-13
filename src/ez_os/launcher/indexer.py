@@ -1,56 +1,74 @@
-import hashlib
-import json
 import os
+import json
+from pathlib import Path
+from datetime import datetime
 
-class GameIndexer:
-    def __init__(self, metadata_db_path='data/metadata_cache.json'):
-        self.metadata_db_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), metadata_db_path)
-        self.cache = self._load_cache()
+# EZ-OS (Anima): External Memory Indexer
+# "I remember what you play, even if I don't hold the cartridge."
 
-    def _load_cache(self):
-        if os.path.exists(self.metadata_db_path):
-            with open(self.metadata_db_path, 'r') as f:
-                return json.load(f)
-        return {}
+def index_external_drive(target_path):
+    """
+    Scans an external path for ROMs and Saves.
+    Returns a lightweight catalog of metadata.
+    """
+    print(f"[INDEX] Scanning external memory at: {target_path}")
+    
+    catalog = {
+        "scan_date": datetime.now().isoformat(),
+        "source_path": str(target_path),
+        "systems": {},
+        "total_roms": 0,
+        "total_saves": 0
+    }
 
-    def calculate_hash(self, file_path):
-        """Calcula o hash SHA1 para identificação precisa (No-Intro/Redump style)"""
-        if not os.path.exists(file_path):
-            return None
-        
-        sha1 = hashlib.sha1()
-        with open(file_path, 'rb') as f:
-            while True:
-                data = f.read(65536)
-                if not data:
-                    break
-                sha1.update(data)
-        return sha1.hexdigest()
+    target = Path(target_path)
+    
+    if not target.exists():
+        print(f"[ERR] Target path not found: {target_path}")
+        return catalog
 
-    def identify_game(self, file_path):
-        """Simula a identificação de um jogo via hash contra bases canônicas"""
-        file_hash = self.calculate_hash(file_path)
-        if not file_hash:
-            return {"title": os.path.basename(file_path), "status": "unknown"}
-        
-        # Mock de busca em base Libretro/No-Intro
-        # Em uma implementação real, isso consultaria um arquivo .dat ou .json local
-        return {
-            "title": os.path.basename(file_path).split('.')[0],
-            "hash": file_hash,
-            "identified_via": "Local Hash Check",
-            "platform": "Detected via Extension"
-        }
+    # Walk through the directory
+    for root, dirs, files in os.walk(target):
+        for file in files:
+            file_path = Path(root) / file
+            
+            # Simple heuristic for ROMs and Saves
+            if file.endswith((".zip", ".7z", ".iso", ".smc", ".gba", ".nes")):
+                system = file_path.parent.name
+                if system not in catalog["systems"]:
+                    catalog["systems"][system] = {"roms": [], "saves": []}
+                
+                catalog["systems"][system]["roms"].append(file)
+                catalog["total_roms"] += 1
+                
+            elif file.endswith((".srm", ".state", ".sav")):
+                system = file_path.parent.name
+                # Try to map save folder to system (often different in R36S)
+                if system not in catalog["systems"]:
+                     # Fallback bucket
+                     system = "unknown_saves"
+                     if system not in catalog["systems"]:
+                        catalog["systems"][system] = {"roms": [], "saves": []}
 
-    def create_game_node(self, file_path):
-        info = self.identify_game(file_path)
-        return {
-            "label": "game",
-            "properties": {
-                "title": info["title"],
-                "hash": info.get("hash"),
-                "platform": info.get("platform", "Unknown"),
-                "source": "User Provided",
-                "indexed_at": "now"
-            }
-        }
+                catalog["systems"][system]["saves"].append(file)
+                catalog["total_saves"] += 1
+
+    print(f"[DONE] Found {catalog['total_roms']} ROMs and {catalog['total_saves']} Saves.")
+    return catalog
+
+def save_catalog(catalog):
+    data_dir = Path(__file__).parent.parent.parent.parent / "data"
+    output_file = data_dir / "external_memory_map.json"
+    
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(catalog, f, indent=4)
+    
+    print(f"[SAVE] Catalog saved to {output_file}")
+
+if __name__ == "__main__":
+    # In a real scenario, this path comes from the user config
+    # For now, we point to the local hosepdeiro folder
+    HOST_PATH = Path(__file__).parent.parent.parent.parent / "data" / "hospedeiro#1"
+    
+    catalog = index_external_drive(HOST_PATH)
+    save_catalog(catalog)

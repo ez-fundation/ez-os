@@ -1,22 +1,11 @@
 """
-EZ-OS: Sistema Operacional de Memória Lúdica Offline
+EZ-OS (Anima): Sovereign Memory Kernel
+EZ-Fundation | https://github.com/ez-fundation/ez-os
 
-Um sistema de memória factual para jogos retro que registra eventos reais
-e expressa o histórico através de um mascote procedural determinístico.
+A factual memory system that records real events and expresses
+history through a deterministic procedural identity.
 """
 
 __version__ = "1.0.0"
-__author__ = "João"
+__author__ = "EZ-Fundation"
 
-from ez_os.core import memory, governance, companion
-from ez_os.ui import tui
-from ez_os.launcher import launcher, indexer
-
-__all__ = [
-    "memory",
-    "governance",
-    "companion",
-    "tui",
-    "launcher",
-    "indexer",
-]
