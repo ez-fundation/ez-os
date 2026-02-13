@@ -6,6 +6,6 @@ A factual memory system that records real events and expresses
 history through a deterministic procedural identity.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.0-beta"
 __author__ = "EZ-Fundation"
 
